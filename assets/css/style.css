@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 100px;
+}
+ul { list-style: none; padding-left: 5px; }
+a { color:blue; text-decoration: none;}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.bar {
+    background-color: #f9f9fb;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.bar h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+    position: sticky; 
+    top: 0;           
+    align-self: start;
+}
+
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+    position: sticky; 
+    top: 0;           
+    align-self: start;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    text-align: left;
+}
+table thead tr {
+    background-color: #005A9C;
+    color: #ffffff;
+}
+table th, table td {
+    padding: 6px 8px;
+    border: 1px solid #dddddd;
+}
+table th:first-child, table td:first-child {
+    text-align: center;
+    width: 80px; /* Largura fixa para a coluna de episódio */
+}
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #005A9C;
+}
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+}
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+}
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+}
+figure {
+    text-align: center;
+}
+
+.wikipedia-footer {
+    background-color: #f8f9fa; /* Fundo cinza claro */
+    border-top: 1px solid #a2a9b1; /* Linha divisória superior */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 1em; /* Fonte um pouco menor */
+    color: #54595d; /* Cor do texto padrão */
+    text-align: center; /* Centraliza o texto */
+    position: fixed; /* Fixa o elemento na viewport */
+    bottom: 0;       /* Alinha o rodapé à parte inferior da tela */
+    left: 0;         /* Alinha o rodapé à esquerda da tela */
+    width: 100%;     /* Faz o rodapé ocupar toda a largura da tela */
+    z-index: 1000;   /* Garante que o rodapé fique acima de outros elementos */
+    padding-bottom: 3px;
+}
+
+.wikipedia-footer .footer-links {
+    margin-bottom: 10px;
+    display: flex; /* Para alinhar os links horizontalmente */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center; /* Centraliza os links */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.wikipedia-footer .footer-links a {
+    color: #0645ad; /* Azul padrão de link da Wikipédia */
+    text-decoration: none; /* Remove sublinhado padrão */
+    white-space: nowrap; /* Evita quebra de linha individual nos links */
+}
+
+.wikipedia-footer .footer-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.wikipedia-footer .footer-info p {
+    margin: 2px 0; /* Espaçamento entre parágrafos de informação */
+    line-height: 1.5;
+}
+
+.wikipedia-footer .footer-info a {
+    color: #0645ad; /* Azul para links dentro da informação */
+    text-decoration: none;
+}
+
+.wikipedia-footer .footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Opcional: Estilos para telas menores (responsividade) */
+@media (max-width: 600px) {
+    .wikipedia-footer .footer-links {
+        flex-direction: column; /* Links em coluna em telas pequenas */
+        align-items: center; /* Centraliza os links na coluna */
+    }
+}
+
